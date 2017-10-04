@@ -1,6 +1,6 @@
 import { PROTOCOL_REG } from '../constants/protocol-reg';
 
-export function join() {
+export function join(...parts: string[]) {
   const args = Array.prototype.slice.call(arguments, 0);
   let ret = args.join('/');
   let protocol = ret.match(PROTOCOL_REG);

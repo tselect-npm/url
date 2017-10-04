@@ -4,7 +4,7 @@
   "description": "URL related utilities.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require ./node_modules/ts-node/register --require ./test/setup ./test/**/**.test.js"
+    "test": "./node_modules/.bin/mocha --require ./node_modules/ts-node/register --require ./test/setup ./test/**/**.test.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/bluebirds-blue-jay/url/issues"
   },
-  "homepage": "https://github.com/bluebirds-blue-jay/url#readme"
+  "homepage": "https://github.com/bluebirds-blue-jay/url#readme",
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.43",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.0",
+    "ts-node": "^3.3.0",
+    "typedoc": "^0.8.0"
+  }
 }
