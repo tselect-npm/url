@@ -1,4 +1,4 @@
-import { PROTOCOL_REG } from '../constants/protocol-reg';
+import { PROTOCOL_REG } from "../constants/protocol-reg";
 
 export function join(...parts: string[]) {
   const args = Array.prototype.slice.call(arguments, 0);

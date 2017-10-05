@@ -1,5 +1,5 @@
-import { HTTP_PROTOCOL_REG } from "../constants";
-import { join } from "./join";
+import { HTTP_PROTOCOL_REG } from '../constants/http-protocol-reg';
+import { join } from './join';
 
 export function ensureHTTPProtocol(url: string, useHTTPS: boolean | undefined = undefined) {
   const forceProtocol = useHTTPS !== undefined;
