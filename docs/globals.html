@@ -93,7 +93,7 @@
 					<div class="tsd-signature tsd-kind-icon">HTTP_<wbr>PROTOCOL_<wbr>REG<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/^http(s)?:\/{2}/i</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/bluebirds-blue-jay/url/blob/1f6ab90/src/constants/http-protocol-reg.ts#L1">src/constants/http-protocol-reg.ts:1</a></li>
+							<li>Defined in <a href="https://github.com/bluebirds-blue-jay/url/blob/38c678c/src/constants/http-protocol-reg.ts#L1">src/constants/http-protocol-reg.ts:1</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -103,7 +103,7 @@
 					<div class="tsd-signature tsd-kind-icon">PROTOCOL_<wbr>REG<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/^(file:\/|(http(s)?|s?ftp|smb):)(\/){2}/i</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/bluebirds-blue-jay/url/blob/1f6ab90/src/constants/protocol-reg.ts#L1">src/constants/protocol-reg.ts:1</a></li>
+							<li>Defined in <a href="https://github.com/bluebirds-blue-jay/url/blob/38c678c/src/constants/protocol-reg.ts#L1">src/constants/protocol-reg.ts:1</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -120,9 +120,33 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bluebirds-blue-jay/url/blob/1f6ab90/src/utils/ensure-http-protocol.ts#L4">src/utils/ensure-http-protocol.ts:4</a></li>
+									<li>Defined in <a href="https://github.com/bluebirds-blue-jay/url/blob/38c678c/src/utils/ensure-http-protocol.ts#L28">src/utils/ensure-http-protocol.ts:28</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><p>Ensure that an HTTP protocol is present. Set useHTTPS to <code>true</code> to force HTTPS. Set it to <code>false</code> to
+										force HTTP. Let it blank to keep the original protocol or just ensure HTTP.</p>
+									</dd>
+									<dt>example</dt>
+									<dd><pre><code class="lang-typescript">URL.ensureHTTPProtocol(<span class="hljs-string">'example.com'</span>); <span class="hljs-comment">// http://example.com</span>
+</code></pre>
+									</dd>
+									<dt>example</dt>
+									<dd><pre><code class="lang-typescript">URL.ensureHTTPProtocol(<span class="hljs-string">'example.com'</span>, <span class="hljs-literal">true</span>); <span class="hljs-comment">// https://example.com</span>
+</code></pre>
+									</dd>
+									<dt>example</dt>
+									<dd><pre><code class="lang-typescript">URL.ensureHTTPProtocol(<span class="hljs-string">'https://example.com'</span>, <span class="hljs-literal">false</span>); <span class="hljs-comment">// http://example.com</span>
+</code></pre>
+									</dd>
+									<dt>example</dt>
+									<dd><pre><code class="lang-typescript">URL.ensureHTTPProtocol(<span class="hljs-string">'http://example.com'</span>, <span class="hljs-literal">true</span>); <span class="hljs-comment">// https://example.com</span>
+</code></pre>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -146,9 +170,28 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bluebirds-blue-jay/url/blob/1f6ab90/src/utils/ensure-leading-slash.ts#L1">src/utils/ensure-leading-slash.ts:1</a></li>
+									<li>Defined in <a href="https://github.com/bluebirds-blue-jay/url/blob/38c678c/src/utils/ensure-leading-slash.ts#L19">src/utils/ensure-leading-slash.ts:19</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><p>Ensure that a leading slash is present/absent. Deduplicate leading slashes if multiple are found.</p>
+									</dd>
+									<dt>example</dt>
+									<dd><pre><code class="lang-typescript">URL.ensureLeadingSlash(<span class="hljs-string">'foo'</span>); <span class="hljs-comment">// /foo</span>
+</code></pre>
+									</dd>
+									<dt>example</dt>
+									<dd><pre><code class="lang-typescript">URL.ensureLeadingSlash(<span class="hljs-string">'//foo'</span>); <span class="hljs-comment">// /foo</span>
+</code></pre>
+									</dd>
+									<dt>example</dt>
+									<dd><pre><code class="lang-typescript">URL.ensureLeadingSlash(<span class="hljs-string">'/foo'</span>, <span class="hljs-literal">false</span>); <span class="hljs-comment">// foo</span>
+</code></pre>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -172,9 +215,24 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bluebirds-blue-jay/url/blob/1f6ab90/src/utils/ensure-slashes.ts#L4">src/utils/ensure-slashes.ts:4</a></li>
+									<li>Defined in <a href="https://github.com/bluebirds-blue-jay/url/blob/38c678c/src/utils/ensure-slashes.ts#L17">src/utils/ensure-slashes.ts:17</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><p>Combines <code>ensureLeadingSlash</code> and <code>ensureTrailingSlash</code> for convenience.</p>
+									</dd>
+									<dt>example</dt>
+									<dd><pre><code class="lang-typescript">URL.ensureSlashes(<span class="hljs-string">'foo'</span>, { leading: <span class="hljs-literal">true</span>, trailing: <span class="hljs-literal">true</span> }); <span class="hljs-comment">// /foo/</span>
+</code></pre>
+									</dd>
+									<dt>example</dt>
+									<dd><pre><code class="lang-typescript">URL.ensureSlashes(<span class="hljs-string">'foo/'</span>, { leading: <span class="hljs-literal">true</span>, trailing: <span class="hljs-literal">false</span> }); <span class="hljs-comment">// /foo</span>
+</code></pre>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -206,9 +264,28 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bluebirds-blue-jay/url/blob/1f6ab90/src/utils/ensure-trailing-slash.ts#L1">src/utils/ensure-trailing-slash.ts:1</a></li>
+									<li>Defined in <a href="https://github.com/bluebirds-blue-jay/url/blob/38c678c/src/utils/ensure-trailing-slash.ts#L19">src/utils/ensure-trailing-slash.ts:19</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><p>Ensure that a trailing slash is present/absent. Deduplicate trailing slashes if multiple are found.</p>
+									</dd>
+									<dt>example</dt>
+									<dd><pre><code class="lang-typescript">URL.ensureTrailingSlash(<span class="hljs-string">'foo'</span>); <span class="hljs-comment">// foo/</span>
+</code></pre>
+									</dd>
+									<dt>example</dt>
+									<dd><pre><code class="lang-typescript">URL.ensureTrailingSlash(<span class="hljs-string">'foo//'</span>); <span class="hljs-comment">// foo/</span>
+</code></pre>
+									</dd>
+									<dt>example</dt>
+									<dd><pre><code class="lang-typescript">URL.ensureTrailingSlash(<span class="hljs-string">'foo/'</span>, <span class="hljs-literal">false</span>); <span class="hljs-comment">// foo</span>
+</code></pre>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -232,9 +309,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bluebirds-blue-jay/url/blob/1f6ab90/src/utils/join.ts#L3">src/utils/join.ts:3</a></li>
+									<li>Defined in <a href="https://github.com/bluebirds-blue-jay/url/blob/38c678c/src/utils/join.ts#L11">src/utils/join.ts:11</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><p>Similar to Node&#39;s Path.join(), but for URLs.</p>
+									</dd>
+									<dt>example</dt>
+									<dd><pre><code class="lang-typescript">URL.join(<span class="hljs-string">'http://example.com/'</span>, <span class="hljs-string">'/foo'</span>); <span class="hljs-comment">// http://example.com/foo</span>
+</code></pre>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>

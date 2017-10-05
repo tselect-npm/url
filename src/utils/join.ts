@@ -1,5 +1,13 @@
 import { PROTOCOL_REG } from "../constants/protocol-reg";
 
+/**
+ * @description Similar to Node's Path.join(), but for URLs.
+ *
+ * @example
+ * ```typescript
+ * URL.join('http://example.com/', '/foo'); // http://example.com/foo
+ * ```
+ */
 export function join(...parts: string[]) {
   const args = Array.prototype.slice.call(arguments, 0);
   let ret = args.join('/');
