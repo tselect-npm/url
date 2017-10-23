@@ -70,21 +70,11 @@
 					<li><code>typescript &gt;= 2.4</code></li>
 				</ul>
 				<h2 id="installation">Installation</h2>
-				<p><code>npm i @bluejay/url [--save]</code></p>
+				<p><code>npm i @bluejay/url</code></p>
 				<h2 id="usage">Usage</h2>
 				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> URL <span class="hljs-keyword">from</span> <span class="hljs-string">'@bluejay/url'</span>;
 
 URL.ensureSlashes(<span class="hljs-string">'/foo'</span>, { leading: <span class="hljs-literal">false</span>, trailing: <span class="hljs-literal">true</span> }); <span class="hljs-comment">// foo/</span>
-</code></pre>
-				<p>Using the named export.</p>
-				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { URL } <span class="hljs-keyword">from</span> <span class="hljs-string">'@bluejay/url'</span>;
-
-URL.ensureSlashes(<span class="hljs-string">'/foo'</span>, { leading: <span class="hljs-literal">false</span>, trailing: <span class="hljs-literal">true</span> }); <span class="hljs-comment">// foo/</span>
-</code></pre>
-				<p>Or directly.</p>
-				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { ensureSlashes } <span class="hljs-keyword">from</span> <span class="hljs-string">'@bluejay/url'</span>;
-
-ensureSlashes(<span class="hljs-string">'/foo'</span>, { leading: <span class="hljs-literal">false</span>, trailing: <span class="hljs-literal">true</span> }); <span class="hljs-comment">// foo/</span>
 </code></pre>
 				<h2 id="documentation">Documentation</h2>
 				<p>See <a href="https://bluebirds-blue-jay.github.io/url/">Github Pages</a>.</p>

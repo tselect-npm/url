@@ -9,7 +9,7 @@ URL related utilities.
 
 ## Installation
 
-`npm i @bluejay/url [--save]`
+`npm i @bluejay/url`
 
 ## Usage
 
@@ -17,22 +17,6 @@ URL related utilities.
 import * as URL from '@bluejay/url';
 
 URL.ensureSlashes('/foo', { leading: false, trailing: true }); // foo/
-```
-
-Using the named export.
-
-```typescript
-import { URL } from '@bluejay/url';
-
-URL.ensureSlashes('/foo', { leading: false, trailing: true }); // foo/
-```
-
-Or directly.
-
-```typescript
-import { ensureSlashes } from '@bluejay/url';
-
-ensureSlashes('/foo', { leading: false, trailing: true }); // foo/
 ```
 
 ## Documentation

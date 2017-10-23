@@ -1,4 +1,4 @@
-import { URL } from '../';
+import * as URL from '../';
 
 describe('URL', function () {
   describe('.join()', function () {
