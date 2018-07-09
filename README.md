@@ -1,5 +1,9 @@
 # URL
 
+[![npm](https://img.shields.io/npm/v/@bluejay/url.svg?style=flat-square)](https://www.npmjs.com/package/@bluejay/url)
+ [![npm](https://img.shields.io/npm/dm/@bluejay/url.svg?style=flat-square)](https://www.npmjs.com/package/@bluejay/url)
+[![npm](https://img.shields.io/npm/l/@bluejay/url.svg?style=flat-square)](https://www.npmjs.com/package/@bluejay/url)
+
 URL related utilities.
 
 ## Requirements
