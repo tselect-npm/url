@@ -1,5 +1,5 @@
-import { ensureLeadingSlash } from "./ensure-leading-slash";
-import { ensureTrailingSlash } from "./ensure-trailing-slash";
+import { ensureLeadingSlash } from './ensure-leading-slash';
+import { ensureTrailingSlash } from './ensure-trailing-slash';
 
 /**
  * @description Combines `ensureLeadingSlash` and `ensureTrailingSlash` for convenience.

@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import * as URL from '../';
 
 describe('URL', function () {

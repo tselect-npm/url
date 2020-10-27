@@ -16,7 +16,7 @@
  * URL.ensureLeadingSlash('/foo', false); // foo
  * ```
  */
-export function ensureLeadingSlash(url: string, value: boolean = true): string {
+export function ensureLeadingSlash(url: string, value = true): string {
   url = url.replace(/^\/+/, '');
 
   if (value) {

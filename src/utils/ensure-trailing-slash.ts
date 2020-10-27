@@ -16,7 +16,7 @@
  * URL.ensureTrailingSlash('foo/', false); // foo
  * ```
  */
-export function ensureTrailingSlash(url: string, value: boolean = true): string {
+export function ensureTrailingSlash(url: string, value = true): string {
   url = url.replace(/\/+$/, '');
 
   if (value) {
