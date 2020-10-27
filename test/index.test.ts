@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import * as URL from '../';
+import * as URL from '../src';
 
 describe('URL', function () {
   describe('.join()', function () {
