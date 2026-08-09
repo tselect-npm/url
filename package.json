@@ -4,6 +4,9 @@
   "description": "URL related utilities.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "mocha -r ts-node/register -r test/setup.ts --recursive test/**/*.test.ts",
     "cov": "nyc npm test",
@@ -11,7 +14,7 @@
     "fix": "tslint --fix --project ./",
     "compile": "tsc",
     "build": "rm -rf dist && mkdir dist && tsc --noEmit false",
-    "prepare": "tsc",
+    "prepare": "npm run build",
     "prepublishOnly": "npm run lint && npm run cov && npm run build"
   },
   "repository": {
