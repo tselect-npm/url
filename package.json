@@ -2,8 +2,23 @@
   "name": "@tselect/url",
   "version": "1.0.0",
   "description": "URL related utilities.",
-  "main": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
   "files": [
     "dist"
   ],
@@ -12,10 +27,10 @@
     "cov": "nyc npm test",
     "lint": "tslint --project ./",
     "fix": "tslint --fix --project ./",
-    "compile": "tsc",
-    "build": "rm -rf dist && mkdir dist && tsc --noEmit false",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run lint && npm run cov && npm run build"
+    "typecheck": "tsc --noEmit",
+    "build": "tsup",
+    "prepack": "pnpm build",
+    "prepublishOnly": "pnpm lint && pnpm cov && pnpm build"
   },
   "repository": {
     "type": "git",
@@ -38,6 +53,7 @@
     "nyc": "15.1.0",
     "ts-node": "^9.1.1",
     "tslint": "6.1.3",
+    "tsup": "^8.5.1",
     "typescript": "^4.9.5"
   }
 }
