@@ -4,6 +4,7 @@
     "target": "es6",
     "moduleResolution": "node",
     "noEmit": true,
+    "skipLibCheck": true,
     "strict": true,
     "strictNullChecks": true,
     "alwaysStrict": true,
@@ -15,13 +16,12 @@
       "es2017"
     ],
     "types": [
-      "node",
-      "mocha",
-      "chai"
+      "node"
     ]
   },
   "include": [
-    "src"
+    "src",
+    "test"
   ],
   "exclude": [
     "node_modules",
