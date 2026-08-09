@@ -14,7 +14,7 @@ import { ensureTrailingSlash } from './ensure-trailing-slash';
  * URL.ensureSlashes('foo/', { leading: true, trailing: false }); // /foo
  * ```
  */
-export function ensureSlashes(url: string, options: { leading?: boolean, trailing?: boolean }): string {
+export function ensureSlashes(url: string, options: { leading?: boolean; trailing?: boolean }): string {
   if ('leading' in options) {
     url = ensureLeadingSlash(url, options.leading);
   }
