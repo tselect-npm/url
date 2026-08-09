@@ -12,19 +12,9 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "experimentalDecorators": true,
-    "lib": [
-      "es2017"
-    ],
-    "types": [
-      "node"
-    ]
+    "lib": ["es2017"],
+    "types": ["node"]
   },
-  "include": [
-    "src",
-    "test"
-  ],
-  "exclude": [
-    "node_modules",
-    "lib"
-  ]
+  "include": ["src", "test"],
+  "exclude": ["node_modules", "lib"]
 }
