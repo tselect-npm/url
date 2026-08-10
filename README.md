@@ -2,11 +2,13 @@
 
 [![npm](https://img.shields.io/npm/v/@tselect/url.svg?style=flat-square)](https://www.npmjs.com/package/@tselect/url)
 [![npm](https://img.shields.io/npm/dm/@tselect/url.svg?style=flat-square)](https://www.npmjs.com/package/@tselect/url)
+[![CI](https://img.shields.io/github/actions/workflow/status/tselect-npm/url/ci.yml?branch=main&style=flat-square)](https://github.com/tselect-npm/url/actions/workflows/ci.yml)
+[![coverage](https://img.shields.io/coverallsCoverage/github/tselect-npm/url?branch=main&style=flat-square)](https://coveralls.io/github/tselect-npm/url?branch=main)
 [![license](https://img.shields.io/npm/l/@tselect/url.svg?style=flat-square)](./LICENSE)
 
 URL related utilities.
 
-Zero runtime dependencies. Ships both ESM and CommonJS builds, with TypeScript types for each.
+Zero runtime dependencies. Ships both ESM and CommonJS builds, with TypeScript types for each. Tested on Node 22, 24 and 26.
 
 ## Installation
 
