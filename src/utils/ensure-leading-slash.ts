@@ -20,7 +20,7 @@ export function ensureLeadingSlash(url: string, value = true): string {
   url = url.replace(/^\/+/, '');
 
   if (value) {
-    url = '/' + url;
+    url = `/${url}`;
   }
 
   return url;
