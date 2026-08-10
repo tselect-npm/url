@@ -23,4 +23,6 @@ concurrency:
 
 jobs:
   ci:
-    uses: tselect-npm/.github/.github/workflows/ci.yml@v1
+    uses: tselect-npm/.github/.github/workflows/ci.yml@feat/smoke-node-matrix
+    with:
+      smoke-node-versions: '["14.0.0", "14", "16", "18", "20"]'
