@@ -8,7 +8,11 @@
 
 URL related utilities.
 
-Zero runtime dependencies. Ships both ESM and CommonJS builds, with TypeScript types for each. Tested on Node 22, 24 and 26.
+Zero runtime dependencies. Ships both ESM and CommonJS builds, with TypeScript types for each.
+
+## Requirements
+
+**Node 22 or newer** (`engines.node` is `>=22`) — every line still receiving security support. Each release is tested on 22, 24 and 26; the declared floor is the lowest version CI actually runs, not a guess.
 
 ## Installation
 
