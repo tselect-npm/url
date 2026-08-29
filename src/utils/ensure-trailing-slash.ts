@@ -17,7 +17,13 @@
  * ```
  */
 export function ensureTrailingSlash(url: string, value = true): string {
-  url = url.replace(/\/+$/, '');
+  // Linear scan instead of a `/\/+$/` regex: the anchored quantifier backtracks
+  // quadratically on inputs made of many '/' not followed by end of string.
+  let end = url.length;
+  while (end > 0 && url.charCodeAt(end - 1) === 47 /* '/' */) {
+    end--;
+  }
+  url = url.slice(0, end);
 
   if (value) {
     url = `${url}/`;
