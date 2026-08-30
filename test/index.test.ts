@@ -60,6 +60,18 @@ describe('URL', () => {
     it('should leave the url untouched', () => {
       expect(URL.ensureTrailingSlash('foo', false)).toBe('foo');
     });
+    it('should handle an empty string', () => {
+      expect(URL.ensureTrailingSlash('')).toBe('/');
+    });
+    it('should dedup long runs of trailing slashes', () => {
+      expect(URL.ensureTrailingSlash(`foo${'/'.repeat(10_000)}`)).toBe('foo/');
+    });
+    it('should stay linear on inputs of repeated slashes (ReDoS regression)', () => {
+      const input = `${'/'.repeat(50_000)}a`;
+      const start = performance.now();
+      expect(URL.ensureTrailingSlash(input, false)).toBe(input);
+      expect(performance.now() - start).toBeLessThan(250);
+    });
   });
   describe('.ensureSlashes()', () => {
     it('should add leading slash', () => {
